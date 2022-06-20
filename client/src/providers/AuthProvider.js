@@ -13,8 +13,16 @@ const AuthProvider = ({children})=> {
         navigate('/')
     }
 
+    const login = () => {
+        console.log('login func called')
+    }
+
+    const register = () => {
+        console.log('register func called')
+    }
+
     return (
-        <AuthContext.Provider value={{user, logout}}>
+        <AuthContext.Provider value={{user, logout, login, register}}>
             {children}
         </AuthContext.Provider>
     )
