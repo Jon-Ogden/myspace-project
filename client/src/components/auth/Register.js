@@ -6,7 +6,7 @@ const Register = () => {
   const [email, setEmail] = useState("example@notreal.com");
   const [password, setPassword] = useState("password");
   const [passwordConfirmation, setPasswordConfirmation] = useState("password");
-  const [userName, setUserName] = useState('username')
+  const [name, setName] = useState('username')
 
   const handleSubmit = (e)=>{
       e.preventDefault()
@@ -18,7 +18,7 @@ const Register = () => {
           alert('passwords do not match')
           return // do even try to register if passwords do not match
       }
-      register({email, userName, password})
+      register({email, name, password})
   }
   return (
     <>
@@ -35,8 +35,8 @@ const Register = () => {
         <input
           required
           autoFocus
-          value={userName}
-          onChange={(e) => setUserName(e.target.value)}
+          value={name}
+          onChange={(e) => setName(e.target.value)}
         />
         <label>password</label>
         <input
